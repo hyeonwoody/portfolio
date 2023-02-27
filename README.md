@@ -17,8 +17,9 @@
 </br>
 
 ## 🧱: Technologies Used
->Vite (React)
+>React (Router)
 
 ## 📖: Libraries Used
->styled-components
+>styled-components  
+>typeit
 
