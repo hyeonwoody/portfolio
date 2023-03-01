@@ -5,17 +5,18 @@ import * as color from './Colors'
 
 export const HeadBarContainer = styled.div`
   position: fixed;
-  display: flex;
   top: 0;
   left: 0;
   right: 0;
-  background-color: ${color.accent};
-  z-index: 9999; //겹쳐놓기
+  background-color: ${color.white};
+  z-index: 9999;
+  border-bottom: 1px solid ${color.grey};
   
 `;
 
 export const Header = styled.span`
-  font-weight: 200;  
+  font-weight: 400;  
   font-size: 28px;
+  flex-shrink : 0;
   color: ${color.font};
 `;

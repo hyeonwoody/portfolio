@@ -6,6 +6,7 @@ export default function HeadBar() {
  
   return (
     <B.HeadBarContainer>
+      
       <B.Header aria-label='logo'>정현우</B.Header>
       <Contact/>
     </B.HeadBarContainer>
