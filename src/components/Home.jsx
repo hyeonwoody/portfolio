@@ -6,11 +6,11 @@ import { Introduce } from './Introduce';
 export default function Home() {
   console.log("aHoffssme")
   return (
-    <div>
+    <H.HomeContainer>
       
       <HeadBar/>
       <Introduce />
       
-      </div>
+      </H.HomeContainer>
   );
 }
