@@ -3,7 +3,7 @@ import * as color from './Colors'
 
 
 
-export const HeadBarContainer = styled.div`
+export const Container = styled.div`
   position: fixed;
   top: 0;
   left: 0;
@@ -20,3 +20,10 @@ export const Header = styled.span`
   flex-shrink : 0;
   color: ${color.font};
 `;
+
+
+export const Navigation = styled.nav`
+  display: flex;
+  justify-content : space-evenly;
+  align-items: center;
+`
