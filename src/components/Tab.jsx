@@ -14,6 +14,7 @@ const TabButton = styled.button`
     border: none;
     font-size: 20px;
     background-color: transparent;
+    cursor: pointer;
 `
 
 export default Tab;
