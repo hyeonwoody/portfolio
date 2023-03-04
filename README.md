@@ -11,7 +11,7 @@
 
 ## 📞: Contact
 - 이메일: hyeonwoody@gmail.com
-- 블로그: https://leoda.tistory.com/
+- 블로그: https://velog.io/@hyeonwoody
 - 깃헙: https://github.com/hyeonwoody
 
 </br>
