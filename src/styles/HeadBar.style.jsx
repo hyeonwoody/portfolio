@@ -16,7 +16,7 @@ export const Container = styled.div`
 
 export const Header = styled.span`
   font-weight: 400;  
-  font-size: 28px;
+  font-size: 30px;
   flex-shrink : 0;
   color: ${color.font};
 `;
@@ -26,6 +26,6 @@ export const Navigation = styled.nav`
   display: flex;
   justify-content : space-evenly;
   align-items: center;
-  font-family: 'Black';
+  
 
 `
