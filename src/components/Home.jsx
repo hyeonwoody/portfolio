@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <H.Container>
       <HeadBar state={state} dispatch={dispatch}/>
-      {state.render}
+      {state.content}
 
       </H.Container>
   );

@@ -13,21 +13,21 @@ export const changeMenu = (state, action) => {
         introduceStyle: {color: color.accent, borderBottom: '1px solid '+color.black},
         stackStyle: {color: color.grey},
         projectStyle: {color: color.grey},
-        render: <Introduce />,
+        content: <Introduce />,
       };
     case 'STACK':
       return {
         introduceStyle: {color: color.grey},
         stackStyle: {color: color.accent, borderBottom: '1px solid '+color.black},
         projectStyle: {color: color.grey},
-        render: <Stack />,
+        content: <Stack />,
       };
     case 'PROJECT':
       return {
         introduceStyle: {color: color.grey},
         stackStyle: {color: color.grey},
         projectStyle: {color: color.accent, borderBottom: '1px solid '+color.black},
-        render: <Project />,
+        content: <Project />,
       };
     default:
       break;
@@ -35,9 +35,9 @@ export const changeMenu = (state, action) => {
 };
 
 export const initMenu = {
-  render: <Introduce />,
   introduceStyle: {color: color.accent, borderBottom: '1px solid '+color.black},
   stackStyle: {color: color.grey},
   projectStyle: {color: color.grey},
+  content: <Introduce />,
 };
 

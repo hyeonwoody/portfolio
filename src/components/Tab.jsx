@@ -1,9 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
+const handleClick = () => {
+    onClick();
+}
+
 const Tab = ({ title, onClick, reducerStyle}) => {
     return (
-        <TabButton onClick={onClick} style={reducerStyle}>
+        <TabButton onClick={onClick} style= {reducerStyle}>
             {title}
         </TabButton>
     )
@@ -15,6 +19,11 @@ const TabButton = styled.button`
     font-size: 20px;
     background-color: transparent;
     cursor: pointer;
+    font-family: 'Kotra';
+    &: hover {
+        color: #3e8e41;
+    }
+
 `
 
 export default Tab;

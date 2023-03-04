@@ -1,8 +1,19 @@
+@font-face {
+  font-family: 'Black';
+  src: url('src/assets/fonts/BlackHanSans-Regular.ttf');
+};
+@font-face {
+  font-family: 'Noto';
+  src: url('src/assets/fonts/NotoSansKR-Regular.otf');
+};
+@font-face {
+  font-family: 'Gothic';
+  src: url('src/assets/fonts/NanumBarunGothic.ttf');
+};
 
-body {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  margin: 0;
-}
-
+@font-face {
+  font-family: 'Kotra';
+  src: url('src/assets/fonts/KOTRA_BOLD.ttf');
+};
 
 

@@ -26,4 +26,6 @@ export const Navigation = styled.nav`
   display: flex;
   justify-content : space-evenly;
   align-items: center;
+  font-family: 'Black';
+
 `

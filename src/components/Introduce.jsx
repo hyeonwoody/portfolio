@@ -11,7 +11,7 @@ export function Introduce () {
 
     return (
         <I.MainHeader>
-            <p>Introduce<br></br></p>
+            <p>인트로를 썼는데요<br></br></p>
         </I.MainHeader>
     );
 }
