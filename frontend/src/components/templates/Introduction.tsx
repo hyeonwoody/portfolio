@@ -1,46 +1,43 @@
 import React from 'react';
-import OrganismHeader from '../organisms/Header';
-import Copyright from '../organisms/footer/copyright/Copyright';
+import OrganismHeader from '../organisms/header/Header';
 import { ContactBoxProps } from '../organisms/box/ContactBox';
+import { NavBarProps } from '../organisms/header/NavBar';
 
-export default function Layout() {
-      const myName = "정현우";
-      const inputMenu = ["경력소개서", "자기소개서"];
-      const ContactContext : ContactBoxProps = {
-        className : "introduction-header-contactBox",
-        contacts : [
-          {
-            href: "https://github.com/hyeonwoody",
-            color: "#000000",
-            className: "introduction-header-contactBox-github",
-            size : 30,
-          },
-          {
-            href: "https://velog.io/@hyeonwoody",
-            color: "#17cf98",
-            className: "introduction-header-contactBox-velog",
-            size : 30,
-          },
-          {
-            href: "mailto:hyeonwoody@gmail.com",
-            color: "#d42011",
-            className: "introduction-header-contactBox-gmail",
-            size : 30,
-          },
-        ]
+interface IntroductionLayoutProps{
+  Header : {
+    myName : string,
+    menu : NavBarProps,
+    contants : ContactBoxProps,
+  }
+  Content : {
+    
+  } | undefined
+  Footer : {
+
+  } | undefined
+}
+
+export default function Layout({Header , Content, Footer, ...props} : IntroductionLayoutProps) {
+      
+      const onClickMenu = ()=> {
+
       }
+
+      Header.menu.onClick = onClickMenu;
+
+      const HeaderStyle = { Position: 'fixed', left:0, right:0, backgroundColor: 'white' };
+      Header.contants.style = {position: 'fixed', top: '8px', right: '20px', paddingBottom: '20px'}
+      Header.menu.style = { display: 'flex', justifyContent: 'space-evenly', alignItems: 'center'}
+      
       return (
           <div id='introduction-container'>
-          <OrganismHeader {...{author : myName, menu :inputMenu, contactBox : ContactContext}}/>
+          <OrganismHeader style={HeaderStyle} {...{author : Header.myName, menu : Header.menu, contactBox : Header.contants}} />
           <section id='introduction'>
             <article id='introduction-article'>
             </article>
           </section>
           <footer></footer>
         </div>
-
-        
-        
       )
 };
 

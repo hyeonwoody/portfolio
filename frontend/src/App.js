@@ -1,4 +1,4 @@
-import Root from './pages/Root'
+
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Introduction from './pages/Introduction';

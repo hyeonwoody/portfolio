@@ -1,10 +1,13 @@
 import React from 'react';
+import {grey, red} from '../../../styles/Colors'
 
 interface SvgProps {
     className : string,
     size : number,
     color? : string,
+    style? : React.CSSProperties
 }
+
 
 const Svg = (props : SvgProps)=>{
     let inputPath = "";
@@ -28,9 +31,9 @@ const Svg = (props : SvgProps)=>{
 
     return (
         <svg id={props.className} role="img" 
-        height = {props.size? props.size : undefined}
-        width = {props.size? props.size : undefined}
-        fill = {props.color? props.color : "#000000"}
+        height = {props.size? props.size + 'px' : undefined}
+        width = {props.size? props.size + 'px' : undefined}
+        fill = {props.color? props.color : grey}
         xmlns="http://www.w3.org/2000/svg">
             <title>{props.className}</title>
             <path d={inputPath}/>

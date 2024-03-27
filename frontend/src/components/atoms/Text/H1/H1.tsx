@@ -1,15 +1,17 @@
 
 import React from 'react';
-import './H1.css';
+import '../Family/Family.css';
 
 interface TitleProps{
     name : string,
+    style? : React.CSSProperties
 }
 
 const H1 = (props : TitleProps) => {
     const myStyle ={
         fontFamily: 'Kotra',
         fontSize: '40px',
+        marginBlockEnd: '0px',
     }
 
     return (
