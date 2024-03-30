@@ -10,8 +10,8 @@ interface TitleProps{
 const H1 = (props : TitleProps) => {
     const myStyle ={
         fontFamily: 'Kotra',
-        fontSize: '40px',
-        marginBlockEnd: '0px',
+        marginTop: '0rem',
+        marginBottom: '0rem',
     }
 
     return (

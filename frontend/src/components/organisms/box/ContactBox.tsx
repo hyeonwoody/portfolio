@@ -15,6 +15,7 @@ export interface ContactBoxProps{
 const ContactBox = (props : ContactBoxProps) => {
     const [color, setColor] = useState<string[]>([]);
     const initialColors = Array(props.contacts.length).fill(subFont);
+    console.log("Contact",props.style)
     useEffect(()=> {
         const initialColors = Array(props.contacts.length).fill(subFont);
         setColor(initialColors);
@@ -27,7 +28,6 @@ const ContactBox = (props : ContactBoxProps) => {
             return updatedColor;
         });    
     }
-
     const onMouseLeave = () => {
         setColor(initialColors);
     }
@@ -70,7 +70,6 @@ const ContactBox = (props : ContactBoxProps) => {
 
     return (
         <div className="header-contactBox" style={props.style}>
-               
             <SvgLinkBond links={links}
             ></SvgLinkBond>
         </div>

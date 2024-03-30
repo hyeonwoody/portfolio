@@ -25,5 +25,5 @@ React 함수형 컴포넌트, Atomic Design Pattern으로 구현해본 포트폴
 
 
 ## 🔥: Accomplishments
-> Atomic Design Patter 이해
+> Atomic Design Patter 이해 
 > Molecules과 Organisms의 완벽한 구분
