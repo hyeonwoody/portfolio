@@ -9,7 +9,7 @@ const TextSize = (size : number) => {
 
     return (
     <h1 style={myStyle}>
-        {size}의 s포트폴리오</h1>      
+        {size}의 포트폴리오</h1>      
     )
 };
 

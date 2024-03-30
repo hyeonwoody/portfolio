@@ -9,12 +9,6 @@
 };
 
 @font-face {
-font-family: 'Black';
-src: url('../../../../../assets/fonts/BlackHanSans-Regular.ttf');
-};
-
-@font-face {
-font-family: 'Noto';
-src: url('../../../../../assets/fonts/NotoSansKR-Regular.otf');
-};
-  
+    font-family: 'Gothic';
+    src: url('../../../../../assets/fonts/NanumBarunGothic.ttf');
+  };

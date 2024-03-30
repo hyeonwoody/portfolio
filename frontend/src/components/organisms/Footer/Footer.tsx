@@ -7,7 +7,7 @@ import OrganismContactBox from '../box/ContactBox';
 
 interface FooterProps{
     style? : React.CSSProperties,
-    contactBox : ContactBoxProps
+    contactBox? : ContactBoxProps
 }
 
 const Footer = (props : FooterProps) => {

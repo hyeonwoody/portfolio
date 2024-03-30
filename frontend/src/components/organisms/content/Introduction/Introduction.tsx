@@ -1,42 +1,57 @@
 
-import React, {useState, useEffect} from 'react';
+import React, {HTMLAttributes} from 'react';
 import P from '../../../atoms/Text/P/P';
 import TypeIt from 'typeit-react';
+
 export interface IntroductionProps {
-    style : React.CSSProperties
+    contentSection : any,
+    contentArticle : any,
+    typeItBox : React.CSSProperties,
     intro : string[],
-    subIntro : string[]
+    subIntro : string[],
+    subIntroStyle : any,
 }
 
 const Introduction = (props : IntroductionProps) => {
-    return (
-        <section id='introduction' style={props.style}>
-            <article id='introduction-article'>
-                <P>저는</P>
-                <TypeIt
-                        aria-hidden='true'
-                        options={{ loop: true}}
-                        getBeforeInit = {(instance) => {
-                            instance
-                                .type(props.intro[0])
-                                .pause(2000)
-                                .delete('')
-                                .pause(500)
-                                .type(props.intro[1])
-                                .pause(2000)
-                                .delete('')
-                                .pause(500)
-                                .type(props.intro[2])
-                                .pause(2000)
-                                .delete('')
-                                .pause(2000)
-                                return instance;   
-                        }}
-                        >
-                        </TypeIt>
-            </article>
-          </section>
-        
+    return (       
+            <props.contentSection>
+                <props.contentArticle id='introduction-article'>
+                    <P>저는</P>
+                    <div style={props.typeItBox}>
+                    <TypeIt
+                            aria-hidden='true'
+                            options={{ loop: true}}
+                            getBeforeInit = {(instance) => {
+                                instance
+                                    .type(props.intro[0])
+                                    .pause(2000)
+                                    .delete('')
+                                    .pause(500)
+                                    .type(props.intro[1])
+                                    .pause(2000)
+                                    .delete('')
+                                    .pause(500)
+                                    .type(props.intro[2])
+                                    .pause(2000)
+                                    .delete('')
+                                    .pause(2000)
+                                    return instance;   
+                            }}
+                            >
+                            </TypeIt>
+                    </div>
+                    
+                    <P><span>정현우 </span >입니다.</P>
+                    <props.subIntroStyle>
+                    {props.subIntro.map((intro) =>(
+                        <li>{intro}</li>
+                    ))}
+                    </props.subIntroStyle>
+                    {/* <ul style={props.subIntroStyle}>
+                    
+                    </ul> */}
+                </props.contentArticle>
+            </props.contentSection>
     )
     
 };
