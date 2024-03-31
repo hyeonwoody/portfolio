@@ -10,7 +10,7 @@ import styled from 'styled-components'
 import { accent, subAccent } from '../../styles/Colors';
 
 interface IntroductionLayoutProps{
-  Header : {
+  Header? : {
     myName : string,
     titleStyle? : React.CSSProperties,
     menu : NavBarProps,
@@ -21,36 +21,25 @@ interface IntroductionLayoutProps{
     subIntro : string[],
     subIntroStyle? : React.CSSProperties,
   }
-  Footer : {
+  Footer? : {
 
   } | undefined
 }
 
 export default function Layout({Header , Content, Footer, ...props} : IntroductionLayoutProps) {
-      
-      const onClickMenu = ()=> {
-
-      }
-
-      Header.menu.onClick = onClickMenu;
-
-      const MainContainer : React.CSSProperties = {
-        display : 'flex',
-        flexDirection: 'column',
-      }
-
-      const HeaderStyle : React.CSSProperties = { position: 'fixed', top: 0, left:0, right:0, backgroundColor: 'transparent', borderBottom: '0.063rem solid'};
-      Header.titleStyle = { fontSize : '3rem' }
-      Header.contacts.style = {position: 'absolute', top: '0.5rem', right: '1rem', paddingBottom: '1rem'}
-
-      Header.menu.style = { display: 'flex', justifyContent: 'space-evenly', alignItems: 'center'}
-      Header.menu.menuTextStyle = {fontSize : '2rem'}
-
+    
       const ContentSection = styled.section`
         align-items: center;
         min-width: 7rem;
         min-height: 75vh;
         margin-top : 6rem;
+      `
+
+      const ContentArticle = styled.article`
+        font-family : "Nanum Gothic", sans-serif;
+        font-weight: 600;
+        justify-content: center;
+        padding-top : 6rem;
         &:hover {
           animation: vision 2s;
           @keyframes vision {
@@ -62,15 +51,6 @@ export default function Layout({Header , Content, Footer, ...props} : Introducti
             }
           }
         }
-      `
-
-      const ContentArticle = styled.article`
-        font-family : "Nanum Gothic", sans-serif;
-        font-size: 3rem;
-        font-weight: 500;
-        padding-top : 10rem;
-        display : grid;
-        justify-content: center;
       & > p:nth-child(3) { //Accent 
         & > span:first-child {
           opacity : 1;
@@ -105,14 +85,12 @@ export default function Layout({Header , Content, Footer, ...props} : Introducti
       `
 
       const TypeItBox : React.CSSProperties = {
+        display : 'flex',
         borderBottom: '2px solid grey',
-        height: '4rem',
-        width : '82rem',
-        paddingBottom : '0rem'
+        width : '52rem',
       }
 
       const SubIntroStyle = styled.ul`
-        font-size: 2rem;
         font-weight: 600;
         list-style: none;
         padding-left: 0rem;
@@ -122,17 +100,14 @@ export default function Layout({Header , Content, Footer, ...props} : Introducti
             padding-left: 1rem;
           }
       `
-
-      const FooterStyle : React.CSSProperties = { display: 'flex', backgroundColor: 'white', alignItems: 'center', justifyContent: 'center', paddingBottom : '1rem'};
       return (
-          <div id='introduction-container' style={MainContainer}
-          >
-          <OrganismHeader style={HeaderStyle} {...{author : Header.myName, titleStyle : Header.titleStyle, menu : Header.menu, contactBox : Header.contacts}} />
+          <div id='introduction-container' style={{marginTop : '6rem'}}>
+          {/* <OrganismHeader style={HeaderStyle} {...{author : Header.myName, titleStyle : Header.titleStyle, menu : Header.menu, contactBox : Header.contacts}} /> */}
           
           <OrganismContent contentSection={ContentSection} contentArticle={ContentArticle} {...{typeItBox : TypeItBox, intro : Content?.intro, subIntro : Content?.subIntro, subIntroStyle : SubIntroStyle}} />
 
-          <OrganismFooter style={FooterStyle} {...{contactBox : Header.contacts}}></OrganismFooter>
-        </div>
+          {/* <OrganismFooter style={FooterStyle} ></OrganismFooter> */}
+          </div>
       )
 };
 

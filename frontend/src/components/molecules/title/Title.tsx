@@ -11,18 +11,14 @@ const Title = (props : TitleProps ) => {
 
     
     let size : number = 0;
-    console.log("vV",props.style.fontSize)
     if (typeof props.style.fontSize === 'string' && props.style.fontSize.endsWith('rem')) {
         const fontSizeNumber = parseInt(props.style.fontSize.slice(0, -3), 10); // Extract number and convert to base 10
         size = fontSizeNumber;
     }
-    console.log("df",size)
     if (size >= 3){
-        console.log("H1", props.name)
         return (<H1 name={props.name}></H1>)
     }
     else if (size >= 2){
-        console.log("H2", props.name)
         return <H2 style={props.style}>{props.name}</H2>
     }
 

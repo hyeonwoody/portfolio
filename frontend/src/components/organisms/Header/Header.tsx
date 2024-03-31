@@ -15,9 +15,9 @@ export interface HeaderProps{
 }
 
 const Header = (props : HeaderProps) => {
-
+    console.log("HEADER",props)
     return (
-        <header id="header" style={props.style}>
+        <header className="header" id="header" style={props.style}>
             <OrganismTitle text={ props.author} style={props.titleStyle}/>
             <OrganismContactBox style={props.contactBox.style} {...props.contactBox}></OrganismContactBox>
             <OrganismNavBar {...props.menu}></OrganismNavBar>

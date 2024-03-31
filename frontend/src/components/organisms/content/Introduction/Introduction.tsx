@@ -14,11 +14,12 @@ export interface IntroductionProps {
 
 const Introduction = (props : IntroductionProps) => {
     return (       
-            <props.contentSection>
-                <props.contentArticle id='introduction-article'>
+            <props.contentSection className={"contentSection"}>
+                <props.contentArticle className={"contentArticle"} id='introduction-article'>
                     <P>저는</P>
-                    <div style={props.typeItBox}>
+                    <div style={props.typeItBox} className={"contentTypeIt"}>
                     <TypeIt
+                            
                             aria-hidden='true'
                             options={{ loop: true}}
                             getBeforeInit = {(instance) => {
@@ -43,8 +44,8 @@ const Introduction = (props : IntroductionProps) => {
                     
                     <P><span>정현우 </span >입니다.</P>
                     <props.subIntroStyle>
-                    {props.subIntro.map((intro) =>(
-                        <li>{intro}</li>
+                    {props.subIntro.map((intro, index) =>(
+                        <li key={index}>{intro}</li>
                     ))}
                     </props.subIntroStyle>
                     {/* <ul style={props.subIntroStyle}>

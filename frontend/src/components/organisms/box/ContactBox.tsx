@@ -69,7 +69,7 @@ const ContactBox = (props : ContactBoxProps) => {
     }
 
     return (
-        <div className="header-contactBox" style={props.style}>
+        <div id="header-contactBox" className="header-contactBox" style={props.style}>
             <SvgLinkBond links={links}
             ></SvgLinkBond>
         </div>

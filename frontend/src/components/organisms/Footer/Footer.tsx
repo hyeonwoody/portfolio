@@ -12,7 +12,7 @@ interface FooterProps{
 
 const Footer = (props : FooterProps) => {
     return (
-        <footer id="footer" style={props.style}>
+        <footer id="footer" className="footer" style={props.style}>
             <Copyright></Copyright>
         </footer>
     )

@@ -9,13 +9,14 @@ interface TitleProps{
 
 const P = (props : TitleProps) => {
     const myStyle ={
+        fontFamily: 'Nanum Gothic',
         marginBlockStart: '0px',
         marginBlockEnd: '0px',
     }
 
     const combinedStyles : React.CSSProperties = {
-        ...myStyle,
         ...props.style,
+        ...myStyle,
     }
 
     return (

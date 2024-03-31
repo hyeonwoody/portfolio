@@ -2,7 +2,7 @@
 import React from 'react';
 import Layout from '../components/templates/Introduction';
 
-export function Introduction (){
+export function Career (){
 
 
     const contentData = {
@@ -18,11 +18,9 @@ export function Introduction (){
       ]
     }
     return (
-            <Layout 
-            Content={contentData}            
-            />
+            <p>fdsfsdf</p>
     )
 
 } 
 
-export default Introduction;
+export default Career;

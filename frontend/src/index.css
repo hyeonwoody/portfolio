@@ -8,11 +8,80 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
+  }  
 
 
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+/* Styles for smaller screens (e.g., mobile) */
+@media (max-width: 767px) {
+    .root {
+      overflow-x: hidden;
+    }
+    .header{
+      font-size: 70%;
+      
+    }
+    .header-contactBox {
+      padding-left : 75%;
+    }
+
+    .header-navBar {
+      display: none;
+    }
+
+    .contentSection {
+      font-size : 0.7rem;
+    }
+    .contentArticle {
+      padding-top : 5rem;
+      font-size : 1rem;
+    }
+    .contentTypeIt {
+      font-size : 0.8rem;
+      width : 20%;
+    }
+    .footer {
+
+    }
+}
+
+/* Styles for medium screens (e.g., tablets) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .header-navBar {
+    display: flex;
+  }
+  .header-contactBox {
+    padding-left : 85%;
+  }
+}
+
+/* Styles for larger screens (e.g., desktops) */
+@media (min-width: 1024px) {
+  .header{
+    font-size: 100%;
+  }
+  .header-contactBox{
+    right : 0rem;
+    padding-right : 0rem;
+    padding-bottom: 1rem;
+  }
+  .header-navBar {
+
+    display: flex;
+  }
+  .contentSection {
+    font-size : 1rem;
+  }
+  .contentArticle {
+    font-size : 2rem;
+  }
+  .contentTypeIt {
+    font-size : 2rem;
+  }
 }
