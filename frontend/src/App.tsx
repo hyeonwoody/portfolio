@@ -57,7 +57,7 @@ function App() {
     titleStyle : { fontSize : '3rem' },
     menu : navBarData,
     contactBox : contactData,
-    style : { position: 'fixed', top: 0, left:0, right:0, backgroundColor: 'transparent', borderBottom: '0.063rem solid'}
+    style : { position: 'fixed', top: 0, left:0, right:0, backgroundColor: 'white', borderBottom: '0.063rem solid'}
   }
   Header.contactBox.style = {position: 'absolute', top: '0.5rem', paddingBottom: '1rem'}
   Header.menu.style = {justifyContent: 'space-evenly', alignItems: 'center'}

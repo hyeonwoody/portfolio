@@ -1,5 +1,5 @@
 
-import React, {HTMLAttributes} from 'react';
+import React from 'react';
 import P from '../../../atoms/Text/P/P';
 import TypeIt from 'typeit-react';
 

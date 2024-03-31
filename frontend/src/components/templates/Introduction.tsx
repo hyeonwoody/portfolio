@@ -1,7 +1,7 @@
 import React from 'react';
 import OrganismHeader from '../organisms/Header/Header';
 import OrganismFooter from '../organisms/Footer/Footer'
-import OrganismContent from '../organisms/content/Introduction/Introduction'
+import OrganismContent from '../organisms/section/Introduction/Introduction'
 import ContactBox, { ContactBoxProps } from '../organisms/box/ContactBox';
 import { NavBarProps } from '../organisms/Header/NavBar';
 import '../atoms/Text/Family/Family.css';
