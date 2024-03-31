@@ -73,6 +73,7 @@ function App() {
             {Header.menu.menu.map ((menu) => (
               <Route path={menu.link} element={menu.element}></Route>
             ))}
+            <Route path={"*"} element={Header.menu.menu[0].element}></Route>
           </Routes>
           <OrganismFooter style={FooterStyle} ></OrganismFooter>
           </BrowserRouter>

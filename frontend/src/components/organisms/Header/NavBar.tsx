@@ -4,7 +4,7 @@ import OrganismTitle from "./Title"
 import Button from "../../atoms/Button/Button";
 import { accent} from "../../../styles/Colors";
 
-import {Link} from 'react-router-dom';
+import {Link, useLocation} from 'react-router-dom';
 export interface NavBarProps{
     className : string,
     menu : {
@@ -22,14 +22,25 @@ export interface NavBarProps{
 const NavBar = (props : NavBarProps) => {
 
     const [menuSelected, setMenu] = useState<number>();
+    const location = useLocation();
     const onClickButton = (index : number) => {
-        console.log ("BB",props.menu[index].title)
         setMenu(index);
     }
 
-    useEffect(()=> {
-        setMenu(0);
-    }, []);
+    useEffect(() => {
+        // Find the index of the current link in the menu array
+        const currentLinkIndex = props.menu.findIndex(
+          (item) => item.link === location.pathname
+        );
+    
+        // Set the menuSelected state if a match is found
+        if (currentLinkIndex !== -1) {
+          setMenu(currentLinkIndex);
+        }
+        else if (currentLinkIndex === -1){
+            setMenu(0);
+        }
+      }, [location, props.menu]);
 
     const buttonStyle : React.CSSProperties = {
         cursor: 'pointer', 
