@@ -29,15 +29,13 @@ const Career = (props : CareerProps) => {
         }
     })
 
-
-
-
     return (       
             <props.contentSection className={"contentSection"}>
                 <props.contentArticle className={"contentArticle"} id='career-article'>
-                <props.contentScroll><h3>아이폰 15</h3></props.contentScroll>
-                <props.contentScroll><h3>충전포트를</h3></props.contentScroll>
-                <props.contentScroll><h3>그래서 충전포트를 제거합니다</h3></props.contentScroll>
+                    
+                <props.contentScroll><h3>정현우</h3></props.contentScroll>
+                <props.contentScroll><h3>경력이 없다고요?</h3></props.contentScroll>
+                <props.contentScroll><h3>그래서 한 회사에서 한 작업을 자세히 적습니다.</h3></props.contentScroll>
                 <props.contentScroll/>
                 </props.contentArticle>
 
